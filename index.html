@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- register -->
+    <div class="fstcont">
+        <div class="container">
+            <div class="heading">Tip Calculator</div>
+            <form action="" class="form">
+                <input required="" class="input" type="number" id="bill" placeholder="Enter Bill Amount">
+                <input required="" class="input" type="number" id="Persentage" placeholder="percentage %">
+                <input required="" class="input" type="number" id="Total" placeholder="Total Amount to pay">
+                <input required="" class="input" type="number" id="Tip" placeholder="Tip Given">
+
+                <input onclick="calculat()" class="login-button" type="button" value="Submit">
+                <input onclick="Clear()" class="login-button1" type="button" value="Reset">
+
+            </form>
+
+        </div>
+    </div>
+    <script>
+        function calculat(){
+            var billamt = document.getElementById("bill")
+            var perge = document.getElementById("Persentage")
+            var total = document.getElementById("Total")
+            var tip = document.getElementById("Tip")
+    
+            var bill = parseInt(billamt.value)
+            var per = parseInt(perge.value)
+    
+            total.value = bill+bill * per /100
+    
+            tip.value = bill * per /100
+    
+        }
+        function Clear(){
+            var billamt = document.getElementById("bill")
+            var perge = document.getElementById("Persentage")
+            var total = document.getElementById("Total")
+            var tip = document.getElementById("Tip")
+
+            
+
+    
+            billamt.value = ""
+            perge.value = " "
+            total.value = " "
+            tip.value = " "
+    
+        }
+    
+    </script>
+    
+
+</body>
+
+</html>
